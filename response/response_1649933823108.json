@@ -1,0 +1,37 @@
+{
+  "success": "true",
+  "responseArMsg": "تم بنجاح",
+  "responseEngMsg": "Sucess",
+  "data": [
+    {
+      "commentID": 1,
+      "comment": "test",
+      "commentOwner": 1,
+      "displayName": "admin",
+      "profileImage": "/Areas/CP/Content/imgs/354cbeedd1144239bdf49135e46020a8.png",
+      "commentDate": "2022-03-28T17:44:38.917",
+      "isApproved": true,
+      "articlesID": 10001
+    },
+    {
+      "commentID": 2,
+      "comment": "comment  2",
+      "commentOwner": 2,
+      "displayName": "user01",
+      "profileImage": "http://192.168.1.121/Uploads/Profile/WQTT9.jpg",
+      "commentDate": "2022-03-28T17:44:48.117",
+      "isApproved": true,
+      "articlesID": 10001
+    },
+    {
+      "commentID": 3,
+      "comment": "ooooh",
+      "commentOwner": 1,
+      "displayName": "admin",
+      "profileImage": "/Areas/CP/Content/imgs/354cbeedd1144239bdf49135e46020a8.png",
+      "commentDate": "2022-03-28T22:24:28.58",
+      "isApproved": true,
+      "articlesID": 10001
+    }
+  ]
+}

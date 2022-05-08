@@ -1,0 +1,30 @@
+{
+  "success": "true",
+  "responseArMsg": "تم بنجاح",
+  "responseEngMsg": "Sucess",
+  "data": [
+    {
+      "articlesID": 1,
+      "articlesType": 50,
+      "articlesTypeTitle": "About us",
+      "articlesSEOID": "aboutus",
+      "articlesTitle": "About us",
+      "articlesShortBody": null,
+      "articlesBody": "about us",
+      "groupID": 1,
+      "groupTitle": "About us",
+      "publishOption": 1,
+      "publishDate": "2022-03-20T00:00:00",
+      "allowComment": true,
+      "thumHeaderImageURL": null,
+      "inPageHeadrImageURL": null,
+      "ownerID": 1,
+      "displayName": "admin",
+      "likeCount": 12,
+      "viewsVount": 320,
+      "pendingComments": 2,
+      "totalComments": 5,
+      "publishTypeTitle": "Draft"
+    }
+  ]
+}

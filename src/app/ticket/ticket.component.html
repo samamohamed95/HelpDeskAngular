@@ -1,0 +1,112 @@
+<App-navbar></App-navbar>
+<div class="hero-section update2" data-background="">
+    <div class="container" *ngFor="let mainPost of mainPost">
+        <div class="col-sm-12 col-md-6">
+            <h5 class="">{{ mainPost.articlesTitle }}</h5>
+        </div>
+        <div class="col-sm-12 col-md-6"></div>
+        <span class="date update">{{ mainPost.displayName }} , Update
+      {{ setDate(mainPost.publishDate) }}</span
+    >
+  </div>
+  <!-- <div id="ticket">
+      <textarea>edit commint</textarea>
+      <button type="button" class="btn commint2">update</button>
+      <button type="button" class="btn commint2 coment">cancel</button>
+  </div> -->
+  <!-- <h5 class="title title2">GitHelp Center v1.0 is released!</h5> -->
+</div>
+<!--============= Banner Section Ends Here =============-->
+
+<!--============= Changelog Section Starts Here =============-->
+<section class="changelog-section padding-bottom mt--187 pos-rel ticket">
+  <div class="container">
+    <div class="changelog-wrapper">
+      <div class="changelog-item item2" *ngFor="let mainPost of mainPost">
+        <span class="date update"
+          ><img
+            alt="im"
+            class="circle"
+            src="{{ mainPost.thumHeaderImageURL }}"
+          />
+          {{ mainPost.displayName }}, Updated
+          {{ setDate(mainPost.publishDate) }}</span
+        >
+
+
+
+        <p>{{ mainPost.articlesBody }}</p>
+        <div>
+
+            <button
+            (click)="openEditPost()"
+
+              type="button"
+              class="btn btn-link commint3"
+            >
+              Edit
+            </button>
+
+
+
+          <div id="ticket" *ngIf="editepost">
+            <form (submit)="editTicket()">
+              <textarea [(ngModel)]="postData" name="postData"></textarea>
+              <button type="submit" class="btn commint2">update</button>
+              <button
+                (click)="closeEditePost()"
+                type="button"
+                class="btn commint2 coment"
+              >
+                cancel
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="changelog-item new item2"
+        *ngFor="let comments of allcomments"
+      >
+        <span class="date update"
+          ><img alt="im" class="circle" src="{{ comments.profileImage }}" />
+          {{ comments.displayName }}, Updated
+          {{ setDate(comments.commentDate) }}</span
+        >
+        <p>{{ comments.comment }}</p>
+      </div>
+      <form
+        [formGroup]="commentform"
+        (ngSubmit)="submitCommentForm(commentform)"
+      >
+        <!-- <div class="changelog-item item2">
+          <span class="date update"><span class="circle">SN</span> Support Name, Updated 2min ago</span>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit id aperiam facilis praesentium nostrum deserunt atque error nisi, quaerat quis, dolore aut at ducimus consequuntur vel, ea eligendi culpa! Eveniet. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Quisquam, tenetur eius non consequuntur laboriosam optio ea, ad, quas error magni iusto nulla inventore assumenda voluptates laudantium odio doloribus eos ipsa?
+        </p>
+        <button type="button" class="btn btn-link commint3">Edit</button>
+        <div id="ticket">
+            <textarea>edit commint</textarea>
+            <button type="button" class="btn commint2">update</button>
+            <button type="button" class="btn commint2 coment">cancel</button>
+        </div>
+    </div> -->
+    <div class="item2" *ngIf="closeComment">
+        <textarea formControlName="comment" class="textarea2" placeholder="write comment"></textarea>
+        <button type="submit" class="btn commint2">commint</button>
+        <button (click)="closeComment = false" type="button" class="btn commint2 coment">
+            close
+          </button>
+
+        <!-- <input class="attach" type="file" name="filename" /> -->
+    </div>
+    <div *ngIf="newTicket">
+        <button (click)="closeComment = true" class="btn commint2">
+            new ticket
+          </button>
+    </div>
+    </form>
+</div>
+</div>
+</section>

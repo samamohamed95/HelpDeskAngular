@@ -1,0 +1,72 @@
+<App-navbar>
+</App-navbar>
+
+<div class="hero-section bg_img style-three" style="background-image: url(/assets/images/banner/page-header.jpg);">
+    <div class="container">
+        <div class="section-header cl-white">
+            <h2 class="title">Forums</h2>
+            <p>Discover new features, bug fixes and update releases from Deskoto</p>
+        </div>
+    </div>
+</div>
+<!--============= Banner Section Ends Here =============-->
+
+
+<!--============= Changelog Section Starts Here =============-->
+<section class="changelog-section padding-bottom mt--187 pos-rel">
+    <div class="container">
+        <div class="changelog-wrapper">
+            <div class="changelog-item" *ngFor="let Problem of allproblems">
+                <a [routerLink]="['/ticketList', Problem.articlesID]">
+                    <span class="update-button">{{Problem.articlesTitle}}</span></a>
+                <h5 class="title"> {{Problem.articlesTitle}}</h5>
+                <span class="date">Updated {{setDate(Problem.publishDate)}}</span>
+                <p>{{Problem.articlesBody}}</p>
+            </div>
+            <!-- <div class="changelog-item">
+                <span class="update-button">Open</span>
+                <h5 class="title">Login Auth Issue Fixed on Deskoto</h5>
+                <span class="date">Updated over a week ago</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie eu leo at consequat. Maecenas finibus pellentesque nibh, nec pretium nisl ultrices at. Ut est enim, egestas at purus non, viverra mollis arcu. Quisque leo felis, fringilla
+                    eu elementum vestibulum, consequat et mi.</p>
+            </div> -->
+            <!-- <div class="changelog-item">
+                <span class="update-button bug">Close</span>
+                <h5 class="title">Deskoto new feature is released!</h5>
+                <span class="date">Updated over a week ago</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie eu leo at consequat. Maecenas finibus pellentesque nibh, nec pretium nisl ultrices at. Ut est enim, egestas at purus non, viverra mollis arcu. Quisque leo felis, fringilla
+                    eu elementum vestibulum, consequat et mi.</p>
+            </div> -->
+            <!-- <div class="changelog-item">
+                <span class="update-button bug">Bug Fix</span>
+                <h5 class="title">Responsive Issues Fixed on Deskoto v0.3</h5>
+                <span class="date">Updated over a week ago</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie eu leo at consequat. Maecenas finibus pellentesque nibh, nec pretium nisl ultrices at. Ut est enim, egestas at purus non, viverra mollis arcu. Quisque leo felis, fringilla
+                    eu elementum vestibulum, consequat et mi.</p>
+            </div> -->
+        </div>
+    </div>
+</section>
+<!--============= Changelog Section Ends Here =============-->
+
+
+<!--============= Have Questions Section Starts Here =============-->
+<div class="have-questions-section mb--70--145">
+    <div class="container">
+        <div class="have-question-wrapper">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="have-question-content">
+                        <h2 class="title">Still Have Problem?</h2>
+                        <p>Our customer care team is here for you!</p>
+                        <a routerLinks="/contact" class="custom-button">contact Us</a>
+                    </div>
+                </div>
+                <div class="right-thumb d-none d-lg-block">
+                    <img src="./assets/images/faq/have-questions.png" alt="faq">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<App-footer></App-footer>
